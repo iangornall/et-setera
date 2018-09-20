@@ -4,10 +4,11 @@ import SideBar from './SideBar';
 import ProductDetail from './ProductDetail';
 let ProductDetailScreen = (props) => (
   <div>
-    <NavBar />
-    <SideBar />
-    <p>ProductDetailScreen</p>
-    <ProductDetail {...props} />
+    <NavBar {...props} />
+    <div className="container">
+      <SideBar className="side" {...props} />
+      <ProductDetail className="main" {...props} />
+    </div>
   </div>
 )
 export default ProductDetailScreen;

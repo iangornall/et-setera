@@ -4,10 +4,11 @@ import SideBar from './SideBar';
 import ProductList from './ProductList';
 let CategoryScreen = (props) => (
   <div>
-    <NavBar />
-    <SideBar />
-    <p>CategoryScreen {props.match.params.categoryId}</p>
-    <ProductList {...props} />
+    <NavBar {...props} />
+    <div className="container">
+      <SideBar className="side" {...props} />
+      <ProductList className="main" {...props} />
+    </div>
   </div>
 )
 export default CategoryScreen;

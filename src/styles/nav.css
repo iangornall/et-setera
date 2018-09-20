@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+}
+.title {
+  margin: 0;
+  display: 2rem;
+}
+.spacer {
+  flex: 1;
+}

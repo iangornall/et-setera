@@ -1,19 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-let ProductDetail = ({product}) => (
+import AddButton from './AddButton';
+let ProductDetail = ({product, dispatch}) => (
   <div>
-    <div>
-      <h2>{product.title}</h2>
+    <div className="product">
+      <h2 className="product-title">{product.title}</h2>
       <img
           className="product-image"
           alt={product.title}
           src={product.imageURL}
       />
-      <div>{product.description}</div>
+      <div className="product-description">{product.description}</div>
     </div>
-    <div>
-      <div>{product.price}</div>
-      <button>Add to Cart</button>
+    <div className="product-block">
+      <div className="product-price">{product.price}</div>
+      <AddButton product={product} />
       <div>Number in cart</div>
     </div>
   </div>

@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 let ProductList = (props) => (
-  <ul>
+  <ul className="product-list">
     {props.products.map(product => 
-      <li key={product.id}>
-        <h2>
-          <Link to={'/products/' + product.id}>
+      <li className="product" key={product.id}>
+        <h2 className="product-title">
+          <Link className="product-link" to={'/products/' + product.id}>
             {product.title}
           </Link>
         </h2>
@@ -15,8 +15,8 @@ let ProductList = (props) => (
           alt={product.title}
           src={product.imageURL}
         />
-        <div>{product.description}</div>
-        <div>{product.price}</div>
+        <div className="product-description">{product.description}</div>
+        <div className="product-price">{'$' + product.price}</div>
       </li>
     )}
     </ul>

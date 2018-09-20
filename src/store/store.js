@@ -5,7 +5,8 @@ import products from '../data/products.json'
 // JSON.parse(localStorage.getItem('reduxState')) || 
 let initialState = {
   categories,
-  products
+  products,
+  cart: []
 }
 
 let store = createStore(
