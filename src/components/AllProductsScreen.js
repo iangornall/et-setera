@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
 import ProductList from './ProductList';
@@ -11,4 +12,7 @@ let AllProductsScreen = (props) => (
     </div>
   </div>
 )
-export default AllProductsScreen;
+let mapStateToProps = (state, props) => ({
+  products: state.products
+});
+export default connect(mapStateToProps)(AllProductsScreen);

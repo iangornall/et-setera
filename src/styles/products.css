@@ -5,6 +5,14 @@
   justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+}
+.product-container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }
 .product {
   margin: 1em;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
 import ProductList from './ProductList';
@@ -11,4 +12,9 @@ let CategoryScreen = (props) => (
     </div>
   </div>
 )
-export default CategoryScreen;
+let mapStateToProps = (state, props) => ({
+  products: state.products.filter(product => (
+      product.categoryId === props.match.params.categoryId
+    ))
+})
+export default connect(mapStateToProps)(CategoryScreen);
